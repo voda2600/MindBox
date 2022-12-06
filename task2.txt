@@ -1,0 +1,11 @@
+Таблица Product, ProductCategory(отн. много ко многим), Category
+
+
+SELECT CONCAT_WS(' - ',P.Name, C.Name)
+FROM Products P
+LEFT JOIN ProductCategories ProdCat ON P.Id = ProdCat.ProductId
+LEFT JOIN Categories C ON ProdCat.CategoryId = C.Id;
+
+
+Протестировать можно тут:
+https://sqliteonline.com/#sharedb=s:95caa2397d75980726bda3195308d8084ff3b73a8059fe492e9c9a3473f289e01f74a5f62d2a337f40b6c975f2e8f4ad329ed3ec62a118b8ed9c7fad647edeae
